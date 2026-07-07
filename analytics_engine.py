@@ -1,6 +1,6 @@
 """
 Analytics Engine — Week 5-6 Assignment 3
-Core computational modules for athletic performance dashboards.
+
 
 Takes raw GPS coordinate + timestamp + HR streams and computes:
   1. Cumulative distance (Haversine, point-to-point)
@@ -8,7 +8,7 @@ Takes raw GPS coordinate + timestamp + HR streams and computes:
   3. Heart Rate zone breakdown (Zone 1-5)
   4. Rolling averages for smoothing noisy GPS/HR data
 
-No visualization libraries used — pure computation, JSON-serializable output.
+
 """
 
 import json
@@ -16,9 +16,9 @@ import math
 from datetime import datetime, timedelta
 
 
-# ---------------------------------------------------------------------------
+
 # 1. HAVERSINE DISTANCE
-# ---------------------------------------------------------------------------
+
 
 EARTH_RADIUS_M = 6371000  # meters
 
@@ -69,9 +69,9 @@ def compute_cumulative_distance(points):
     return annotated
 
 
-# ---------------------------------------------------------------------------
+
 # 2. PACE / SPLIT CALCULATIONS
-# ---------------------------------------------------------------------------
+
 
 def _parse_ts(ts):
     if isinstance(ts, datetime):
@@ -164,9 +164,9 @@ def compute_splits(annotated_points):
     return splits
 
 
-# ---------------------------------------------------------------------------
+
 # 3. HEART RATE ZONES
-# ---------------------------------------------------------------------------
+
 
 # Standard % of Max HR zone thresholds
 HR_ZONE_THRESHOLDS = {
